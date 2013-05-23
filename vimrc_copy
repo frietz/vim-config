@@ -1,0 +1,24 @@
+execute pathogen#infect()
+
+syntax on
+filetype on
+filetype plugin indent on
+
+call pathogen#incubate()
+call pathogen#helptags()
+
+set foldmethod=indent
+set foldlevel=99
+
+map <leader>td <Plug>TaskList
+map <leader>g :GundoToggle<CR>
+
+
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+
+nmap <leader>a <Esc>:Ack!
+
